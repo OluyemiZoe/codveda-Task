@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Product Catalog</h1>
+            <p>Manage Inventory.</p>
+        </header>
+
+        <main class="dashboard-grid">
+            <!-- Form Card to Add Products -->
+            <section class="card form-card">
+                <h2>Add New Product</h2>
+                <form id="productForm">
+                    <div class="form-group">
+                        <label for="name">Product Name</label>
+                        <input type="text" id="name" required placeholder="Enter product name">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price (#)</label>
+                        <input type="number" id="price" step="0.01" required placeholder="0.00">
+                    </div>
+                    <div class="form-group">
+                        <label for="stock">Stock Quantity</label>
+                        <input type="number" id="stock" required placeholder="0">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Product</button>
+                </form>
+            </section>
+
+            <!-- Grid Card to List Products -->
+            <section class="card list-card">
+                <h2>Current Inventory</h2>
+                <div id="loading" class="text-muted">Fetching from inventory catalog...</div>
+                <div id="productGrid" class="product-grid-display"></div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

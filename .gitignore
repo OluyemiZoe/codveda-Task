@@ -1,0 +1,10 @@
+# Block all node dependencies folders anywhere in the project tree
+**/node_modules/
+
+# Block all private environment variable credentials files anywhere in the project tree
+**/.env
+
+# Standard build directory exclusions
+dist/
+build/
+.DS_Store
